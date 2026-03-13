@@ -268,3 +268,59 @@ li { margin-bottom: 8px; }
   .hero__buttons .btn { width: 100%; }
   .process__steps { grid-template-columns: 1fr; }
 }
+
+/* ==================== MOBILE NAV SHOW ==================== */
+@media (max-width: 968px) {
+  .nav__links.show {
+    display: flex; flex-direction: column; position: absolute;
+    top: 72px; left: 0; right: 0; background: #fff;
+    padding: 20px; border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow); gap: 16px;
+  }
+}
+
+/* ==================== SUB-PAGE STYLES ==================== */
+.page-hero {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #1a365d 100%);
+  padding: 120px 0 60px; color: #fff; text-align: center;
+}
+.page-hero h1 { color: #fff; margin-bottom: 16px; }
+.page-hero p { color: rgba(255,255,255,0.85); font-size: 1.15rem; max-width: 700px; margin: 0 auto; }
+.page-hero .breadcrumb { margin-bottom: 16px; font-size: 0.9rem; }
+.page-hero .breadcrumb a { color: rgba(255,255,255,0.7); }
+.page-hero .breadcrumb span { color: rgba(255,255,255,0.5); margin: 0 8px; }
+
+.content { max-width: 800px; margin: 0 auto; }
+.content h2 { margin-top: 40px; }
+.content h3 { margin-top: 32px; margin-bottom: 12px; }
+.content p { line-height: 1.8; }
+.content ul, .content ol { margin-bottom: 20px; }
+.content li { line-height: 1.7; }
+.content blockquote {
+  border-left: 4px solid var(--primary); padding: 16px 24px;
+  background: var(--bg-alt); margin: 24px 0; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.content-cta {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 32px; text-align: center; margin: 40px 0;
+}
+.content-cta h3 { margin-top: 0; margin-bottom: 12px; }
+.content-cta p { margin-bottom: 20px; }
+
+.related-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; margin-top: 24px;
+}
+
+/* Blog meta */
+.blog-meta { display: flex; gap: 20px; justify-content: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 12px; }
+
+/* Table of Contents */
+.toc {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px 32px; margin: 32px 0;
+}
+.toc h3 { margin-top: 0; font-size: 1rem; margin-bottom: 12px; }
+.toc ol { margin-bottom: 0; }
+.toc a { font-size: 0.95rem; }
