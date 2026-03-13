@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://deltonawaterrestoration.com/sitemap.xml
