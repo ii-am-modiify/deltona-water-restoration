@@ -514,6 +514,7 @@
     <a href="#contact" class="floating-cta__form">📝 Free Estimate</a>
   </div>
 
+  <script>
     document.getElementById('lead-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       const btn = this.querySelector('button[type="submit"]');
@@ -554,6 +555,7 @@
         setTimeout(() => { btn.textContent = origText; btn.disabled = false; btn.style.background = ''; }, 3000);
       }
     });
+  </script>
 
   <!-- FAQ Toggle Script -->
   <script>
@@ -566,47 +568,6 @@
       });
     });
 
-    // Form handler (placeholder — replace with actual endpoint)
-    document.getElementById('lead-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('button[type="submit"]');
-      const origText = btn.textContent;
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-
-      const data = {
-        name: document.getElementById('name').value,
-        phone: document.getElementById('phone').value,
-        email: document.getElementById('email') ? document.getElementById('email').value : '',
-        service: document.getElementById('service').value,
-        message: document.getElementById('message').value,
-        site: 'deltona-water-restoration',
-        domain: 'deltonawaterrestoration.com',
-        vertical: 'water-damage',
-        source: 'form',
-        page: window.location.pathname,
-        referrer: document.referrer
-      };
-
-      try {
-        const res = await fetch('https://leads.fltechadventures.com/api/leads', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        if (res.ok) {
-          btn.textContent = '✅ Sent! We\'ll call you within 15 minutes.';
-          btn.style.background = '#16a34a';
-          this.reset();
-        } else {
-          throw new Error('Server error');
-        }
-      } catch (err) {
-        btn.textContent = '❌ Error — Please call us directly';
-        btn.style.background = '#dc2626';
-        setTimeout(() => { btn.textContent = origText; btn.disabled = false; btn.style.background = ''; }, 3000);
-      }
-    });
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(a => {

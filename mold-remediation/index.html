@@ -303,6 +303,7 @@
     <a href="/#contact" class="floating-cta__form">📝 Free Estimate</a>
   </div>
 
+  <script>
     document.getElementById('lead-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       const btn = this.querySelector('button[type="submit"]');
@@ -343,6 +344,7 @@
         setTimeout(() => { btn.textContent = origText; btn.disabled = false; btn.style.background = ''; }, 3000);
       }
     });
+  </script>
 
   <!-- FAQ Toggle Script -->
   <script>
