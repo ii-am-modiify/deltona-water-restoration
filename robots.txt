@@ -3,9 +3,34 @@ Allow: /
 
 Sitemap: https://deltonawaterrestoration.com/sitemap.xml
 
-# Block bad bots
+# AI/LLM crawlers welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Block SEO scraper bots
 User-agent: AhrefsBot
 Disallow: /
 
 User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
 Disallow: /
