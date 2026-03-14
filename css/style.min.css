@@ -19,3 +19,48 @@
 .area-map__stat strong{display:block;font-size:22px;font-weight:800}
 .area-map__stat span{font-size:12px;color:#a8c8e8}
 @media(max-width:600px){.area-map__stats{flex-direction:column;gap:0.75rem;padding:14px}.area-pin__label{font-size:10px;padding:1px 5px}.area-map__stat strong{font-size:18px}}
+
+/* Process Timeline */
+.process-timeline{max-width:700px;margin:0 auto;padding:0 1rem}
+.process-timeline__step{display:flex;align-items:stretch;margin-bottom:0}
+.process-timeline__step:last-child .process-timeline__line{display:none}
+.process-timeline__left{display:flex;flex-direction:column;align-items:center;width:60px;flex-shrink:0}
+.process-timeline__num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#ff8c00,#ff6600);color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(255,140,0,0.35);position:relative;z-index:2;flex-shrink:0}
+.process-timeline__line{width:3px;flex:1;min-height:20px;background:linear-gradient(to bottom,#ff8c00,#2a5286);margin:0 auto}
+.process-timeline__card{display:flex;align-items:flex-start;gap:16px;background:#f0f5fa;border-radius:12px;padding:20px 24px;margin-left:16px;margin-bottom:16px;border-left:4px solid #2a5286;flex:1;transition:transform 0.2s,box-shadow 0.2s}
+.process-timeline__card:hover{transform:translateX(4px);box-shadow:0 4px 16px rgba(30,58,95,0.12)}
+.process-timeline__icon{font-size:32px;flex-shrink:0;line-height:1}
+.process-timeline__content h3{font-size:18px;color:#1e3a5f;margin:0 0 6px}
+.process-timeline__content p{font-size:15px;color:#555;line-height:1.6;margin:0}
+.process-timeline__content strong{color:#1e3a5f}
+@media(max-width:600px){.process-timeline__left{width:44px}.process-timeline__num{width:38px;height:38px;font-size:16px}.process-timeline__card{padding:14px 16px;margin-left:10px}.process-timeline__icon{font-size:24px}.process-timeline__content h3{font-size:16px}.process-timeline__content p{font-size:14px}}
+
+/* Cost Section */
+.cost-section{max-width:760px;margin:0 auto}
+.cost-section__intro{font-size:16px;color:#555;margin-bottom:24px;text-align:center}
+.cost-tiers{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.cost-tier{display:flex;align-items:center;background:#f8fafb;border-radius:12px;padding:18px 22px;position:relative;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s}
+.cost-tier:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+.cost-tier__indicator{position:absolute;left:0;top:0;bottom:0;width:5px}
+.cost-tier--minor .cost-tier__indicator{background:#28a745}
+.cost-tier--moderate .cost-tier__indicator{background:#ff8c00}
+.cost-tier--severe .cost-tier__indicator{background:#dc3545}
+.cost-tier__icon{font-size:32px;margin-right:16px;flex-shrink:0}
+.cost-tier__info{flex:1}
+.cost-tier__info h3{font-size:17px;color:#1e3a5f;margin:0 0 2px}
+.cost-tier__info p{font-size:13px;color:#777;margin:0}
+.cost-tier__price{font-size:22px;font-weight:800;flex-shrink:0;margin-left:16px}
+.cost-tier--minor .cost-tier__price{color:#28a745}
+.cost-tier--moderate .cost-tier__price{color:#ff8c00}
+.cost-tier--severe .cost-tier__price{color:#dc3545}
+.cost-bars{margin-bottom:28px}
+.cost-bars h4{font-size:17px;color:#1e3a5f;margin-bottom:18px;padding-bottom:8px;border-bottom:2px solid #e8eef3}
+.cost-bar{margin-bottom:16px}
+.cost-bar__label{display:flex;justify-content:space-between;font-size:14px;color:#444;margin-bottom:6px}
+.cost-bar__label strong{color:#1e3a5f}
+.cost-bar__track{height:24px;background:#edf2f7;border-radius:12px;overflow:hidden}
+.cost-bar__fill{height:100%;border-radius:12px;background:linear-gradient(90deg,#2a5286,#4a8bc2);transition:width 0.8s ease}
+.cost-tip{background:#e8f4fd;border-radius:12px;padding:18px 22px;display:flex;align-items:flex-start;gap:14px;margin-top:24px}
+.cost-tip__icon{font-size:28px;flex-shrink:0}
+.cost-tip p{font-size:14px;color:#1e3a5f;line-height:1.6;margin:0}
+@media(max-width:600px){.cost-tier{flex-wrap:wrap;gap:8px}.cost-tier__price{font-size:18px;width:100%;text-align:right}.cost-tier__icon{font-size:24px}}
